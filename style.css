@@ -27,19 +27,35 @@ html{
     color: white;
     border-bottom: 2px solid transparent;
     margin: 0px 20px;
+    display: inline-flex;
     text-decoration: none;
 }
 #navbarSupportedContent a:hover{
     border-bottom: 2px solid whitesmoke;
 }
-#navbarSupportedContent button{
-    background:#82caff;
+/* #navbarSupportedContent button{
+    /* background:#82caff; */
+    
+    /* flex-direction: row-reverse;
     border-radius: 15px;
     width: 5rem;
-    margin: 0px 7px;
+    margin: 0px 7px; */
+/* */ 
+
+.button-home{
+    display: flex;
+    flex-direction: row-reverse;
+    outline: none;
+    /* width: 20px; */
+    column-gap: -10px;
+    background: transparent;
+    position: absolute;
+    right: 0;
 }
 
-
+.button-home button{
+    border-radius: 5px;
+}
 /******home******************/
 
 section{
@@ -308,26 +324,46 @@ footer{
 
 /***************************about**************/
 
+/* #about ul li{
+   text-decoration: none;
+} */
 
 .heading{
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: black;
-    padding-top: 15px;
+    width: 100%;
+    background-color: #0dcaf0;
+    color: #ffffff;
+    padding-top: 7px;
+    padding-bottom: 10px;
+    margin-bottom: 13px;
+    text-decoration: underline;
 }
 .row{
     position: relative;
 } 
 .que{
-    background-color:cornsilk ;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
 }
 .que ul li{
-    list-style: none;   
+    list-style: none;  
+    text-decoration: none; 
+    display: block;
+    width: 100% !important;
+    float:inline-end;
+    padding-bottom: 10px;
+    overflow: hidden;
+
+}
+.que a{
+    text-decoration: none;
 }
 .que ul li:hover{
-    background-color: lightgrey;
-    transition-duration: 0.1s;
+    /* background-color: lightgrey;
+    transition-duration: 0.1s; */
  }
 .que ul li a{
     text-decoration: none;   
@@ -336,13 +372,13 @@ footer{
     text-align: center;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 .ans h4{
     position: absolute;
-    margin-left: 20px;
-    margin-top: -30px;
-    color: darkblue;
+    margin-left: 10px;
+    margin-top: -10px;
+    color: rgb(50, 50, 177);
 }
 
 /***********************contact **********************/
@@ -498,10 +534,10 @@ footer{
 }
 .login p a{
    text-decoration: none;
-   color:#262626;
+   color:#9a98a5;
 }
 .login p a:hover{
-   color: blue;
+    color: rgb(74, 74, 180);
    text-decoration:underline;
 }
 
@@ -590,10 +626,10 @@ footer{
 }
 .Signup p a{
    text-decoration: none;
-   color:#262626;
+   color:#9a98a5;
 }
 .Signup p a:hover{
-   color: blue;
+    color: rgb(74, 74, 180);
    text-decoration:underline;
 }
 
