@@ -361,10 +361,7 @@ footer{
 .que a{
     text-decoration: none;
 }
-.que ul li:hover{
-    /* background-color: lightgrey;
-    transition-duration: 0.1s; */
- }
+
 .que ul li a{
     text-decoration: none;   
 }
