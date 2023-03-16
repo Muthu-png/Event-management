@@ -5,20 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" >
-    <link rel="html" href="login.html">
+    <link rel="stylesheet" href="style.css">
+    <link href="basic.html" rel="html">
+    <link href="signup.html" rel="html">
 </head>
 <body>
     <section id="SignUp">  
         <div class="Signup-container">
           <div class="Signup">
             <div class="container">
-      <form>
+      <form id="signup-T">
         <h1 class="Sign-H">Sign Up</h1>
             <div class="Name">
              <input 
               type="text"
-              class=" form-control"
+              class=" form-control no-outline"
               placeholder="Enter Name"
               id="S-Name" 
               autocomplete="off"
@@ -26,8 +27,8 @@
             </div>
             <div class="S-Email">
               <input 
-               type="text"
-               class=" form-control"
+               type="email"
+               class=" form-control no-outline"
                placeholder="Enter Email"
                id="S-Email" 
                autocomplete="off"
@@ -36,7 +37,7 @@
             <div class="S-Password">
               <input 
               type="password"
-              class="form-control"
+              class="form-control no-outline"
               placeholder="Create Password"
               id="S-Password"
               autocomplete="off" required>

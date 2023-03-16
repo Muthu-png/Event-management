@@ -6,10 +6,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:cursive;
+    font-family:"poppins";
+    font-weight: 400;
 }
 html{
-    scroll-behavior: smooth;
+    scroll-behavior: smooth !important;
 }   
 #navbar{
     position:sticky;
@@ -33,6 +34,20 @@ html{
 #navbarSupportedContent a:hover{
     border-bottom: 2px solid whitesmoke;
 }
+
+/* .login-T,
+.signup-T input{
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+    position: relative;
+} */
+
+.no-outline:focus{
+    outline: none;
+}
+
 /* #navbarSupportedContent button{
     /* background:#82caff; */
     
@@ -43,10 +58,10 @@ html{
 /* */ 
 
 .button-home{
-    display: flex;
+     display: flex;
     flex-direction: row-reverse;
     outline: none;
-    /* width: 20px; */
+     width: 20px;
     column-gap: -10px;
     background: transparent;
     position: absolute;
@@ -75,18 +90,21 @@ section{
 }
 #home h1{
     font-size: 50px;
-    font-family:serif;
+    
+    font-family:"poppins";
     letter-spacing: 1px;
-    text-shadow: 0px 1px 0px white;
+    font-weight: lighter !important;
+    text-shadow: 0px -1px 0px white;
 }
-#home button{
+
+#home a{
     height: 40px;
     width: 200px;
     border-radius: 10px;
-}
-#home a{
+    margin-top: 15px;
     text-decoration: none;
     transition: 3s;
+    color: #fbf6f6;
 }
 
 
@@ -290,27 +308,79 @@ section{
 #booking{
     height: auto;
     width: 100%;
-    background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8)), url(image/bg1.jpg);
+    background:linear-gradient(to left,#dedbd6,#145166,#536190);
     background-position: center;
     background-size: cover;
 }
+
+#booking [type=email],[type=text]{
+    font-family: sans-serif;
+}
+
+#booking h1{
+    font-family:sans-serif;
+}
+
+.plan7{
+    align-items: center !important;
+    justify-content: center !important;
+    margin-top:60px !important;
+    text-shadow: 1px 2px 1px #ffffff;
+}
+
+#form p{
+    margin-top: 5px;
+    margin-left: 10px;
+    visibility: visible;
+}
+
+#form input:focus{
+    border: 1px solid #fff !important;
+    outline: 0;
+}
+
+#form input:valid{
+    outline: none;
+    border: 1px solid #09ff5f !important;
+}
+
+#form input:invalid{
+    outline: none;
+    border: 1px solid #f10909 !important;
+}
+
+.input-control input:focus{
+    border: 1px solid #fff !important;
+    outline: 0;
+      
+}
+
 #now{
-    
     box-shadow: inset 10px 10px 20px darkgray
                       40px 40px 50px white;    
-    margin-top: 40px;       
+    /* margin-top: 40px;        */
+    margin-bottom: 30px;
     border-radius: 12px;       
 }
+
+[type=date]{
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
 #booking button{
     height: 40px;
     width: 200px;
     margin: 30px 175px;
     border-radius: 12px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-#down{
+
+#form{
     margin-top: 40px;
+    /* background-color: #d0c63a; */
 }
-footer{
+
+/* footer{
     background:  #6B5B99;
     color:black;
     text-align: center;
@@ -320,12 +390,6 @@ footer{
     font-size: 14px;
     padding-top: 3px;
     letter-spacing: 2px;
-}
-
-/***************************about**************/
-
-/* #about ul li{
-   text-decoration: none;
 } */
 
 .heading{
@@ -366,10 +430,8 @@ footer{
     text-decoration: none;   
 }
 .ans{
-    text-align: center;
-    justify-content: center;
-    align-items: center;
     margin-top: 20px;
+    margin-left: 10px;
 }
 .ans h4{
     position: absolute;
@@ -379,29 +441,35 @@ footer{
 }
 
 /***********************contact **********************/
-
+/* .bi {
+    color: #fff;
+} */
 #contact{    
-    background: linear-gradient(to right, #bbd2c5, #536976); 
+    background: #b91010; 
     width: 100%;
-    min-height: 40vh;
+    min-height: 30vh;
     position: relative;
 }
 #head-c{
-    
-    color: black;
-    font-weight: bold;
+    color: rgb(229, 229, 229);
+    display: none;
+    font-family:Arial, Helvetica, sans-serif;
     position: absolute;
     left: 0;
-    top: -2px;
+    top: 2px;
     right: 0;
     text-align: center;
-
 }
 .address h6{  
-    color: black ;
+    color: rgb(243, 243, 243) ;
     font-weight: lighter;
     position: relative; 
     top: 10px;
+}
+
+.address i{
+    background-color: #fff;
+    color: #fff !important;
 }
 .address p{
     color:  #6B5B99;
@@ -451,9 +519,18 @@ footer{
 }
 
 /***************login***************/
-#login{
-    background:#E6E6FA;
+
+[type=email],[type=text],[type=password] {
+    padding: 1em 15px 1em 1em;
 }
+
+#login{
+    background:url("./image/bg\ account.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .login{
     height: 300px;
     width: 300px;
@@ -461,7 +538,7 @@ footer{
     align-items: center;
     position: relative;
     text-align: center;
-    background-color:  #51d0de;
+    background-color:  transparent;
     border-radius: 8px;
     box-shadow: 7px 8px 20px rgba(0, 0, 0, 0.7);
     animation:login 5s ease-in 1 alternate;
@@ -478,38 +555,72 @@ footer{
     font-weight: 700;
     padding-top: 13px;
     position: relative;
+    text-decoration: underline;
 }
 .UserName{
     padding-top: 20px;
     outline: none;
     border: none;
+    width: 250px;
+    margin-bottom: 35px;
+    position: relative;
+    left: 10%;
+    text-align: center;
 }
+
+.UserName input{
+    position: absolute;
+    top: auto;
+    left: 7%;
+    width: 83%;
+    height: 30px;
+    border-radius: 7px;
+    border: none;
+}
+
 ::placeholder{
     font-family: 'Poppins', sans-serif;
     font-size: 13px;
+    margin-left: 10px;
 }
 .U-Password{
-    padding-top: 30px;
-    border: none;
+    padding-top: 20px;
     outline: none;
+    border: none;
+    width: 250px;
+    margin-bottom: 35px;
     position: relative;
+    left: 10%;
+    text-align: center;
 }
-.U-Password a{
+
+.U-Password input{
+    position: absolute;
+    top: auto;
+    left: 7%;
+    width: 83%;
+    height: 30px;
+    border-radius: 7px;
+    border: none;
+}
+
+.f-password {   
     color: #E6E6FA;
     text-decoration: none;
-    position: relative;
-    top: -30px;
     display: flex;
-    right: -57%;
+    float: right;
+    padding-top: 5px;
+    margin-right: 35px;
+    margin-bottom: 10px;
     font-family: 'Poppins', sans-serif;
     font-size: 13px;
 }
-.U-Password a:hover{
-    color: blue; 
+.f-password:hover{
+    color: rgb(37, 37, 104); 
 }
 .login button{
     margin-top: 10px;
-    width: 70%;
+    width: 80%;
     border-radius: 10px;
     background: #E6E6FA; ;
     color: #262626;
@@ -517,91 +628,150 @@ footer{
     border: none;
     font-family: 'Dangrek', cursive; ;
 }
+
 .login button:hover{
     background: lightgreen; 
     border: none;
-    outline: none;
-    
+    outline: none;    
 }
+
 .login p{
-    padding-top: 6px;
+    width: 250px;
+    position: absolute;
+    left: 7%;
+    padding-top: 10px;
     color: #E6E6FA;
     font-family: 'Poppins', sans-serif;
-    font-size:13px ;
+    font-size:12px ;
+    display: flex;
+    flex-direction: row;
+    row-gap: 20px;
 }
-.login p a{
-   text-decoration: none;
-   color:#9a98a5;
+
+form a{ 
+    padding-top:-10px ;
+    padding-left:5px ;
+    color: #E6E6FA !important;
+    text-decoration: none;
+    cursor: pointer;
 }
-.login p a:hover{
-    color: rgb(74, 74, 180);
-   text-decoration:underline;
+
+form a:hover{
+    text-decoration: underline;
+    color: rgb(37, 37, 104) !important;
 }
 
 /***********Signup************/
 
 #SignUp{
-    background:#E6E6FA;
+    background:url("./image/bg\ account.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
 .SignUp{
-    height: 350px;
+    height: 300px;
     width: 300px;
     justify-content: center;
     align-items: center;
     position: relative;
     text-align: center;
-    background-color:  #51d0de;
+    background-color:  #6B5B99;
     border-radius: 8px;
     box-shadow: 7px 8px 20px rgba(0, 0, 0, 0.7);
-    animation:SignUp 5s ease-in 1 alternate;
+    animation:signup 5s ease-in 1 alternate;
     animation-duration: 2s;
     transition: 2s;
-    transform: translateY(50px); 
+    transform: translateY(50px);  
 }
+
 .SignUp:hover{
     box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.1);
 }
+
 .Sign-H{
     font-family: 'Dangrek', cursive; ;
     color: #E6E6FA;
     font-weight: 700;
     padding-top: 13px;
     position: relative;
+    text-decoration: underline;
+    margin-left: 40%;
 }
+
 .Name{
     padding-top: 20px;
     outline: none;
     border: none;
+    width: 250px;
+    margin-bottom: 35px;
+    position: relative;
+    left: 10%;
+    text-align: center;
 }
+
+.Name input{
+    position: absolute;
+    top: auto;
+    left: 7%;
+    width: 83%;
+    height: 30px;
+    border-radius: 7px;
+    border: none;
+}
+
 ::placeholder{
     font-family: 'Poppins', sans-serif;
     font-size: 13px;
 }
+
 .S-Email{
-    padding-top: 25px;
-}
-.S-Password{
-    padding-top: 25px;
-    border: none;
+    padding-top: 20px;
     outline: none;
+    border: none;
+    width: 250px;
+    margin-bottom: 35px;
     position: relative;
+    left: 10%;
+    text-align: center;
 }
-.S-Password a{
-    color: #E6E6FA;
-    text-decoration: none;
+
+.S-Email input{
+    position: absolute;
+    top: auto;
+    left: 7%;
+    width: 83%;
+    height: 30px;
+    border-radius: 7px;
+    border: none;
+}
+
+.S-Password{
+    padding-top: 20px;
+    outline: none;
+    border: none;
+    width: 250px;
+    margin-bottom: 35px;
     position: relative;
-    top: -30px;
-    display: flex;
-    right: -57%;
-    font-family: 'Poppins', sans-serif;
-    font-size: 13px;
+    left: 10%;
+    text-align: center;
 }
-.S-Password a:hover{
-    color: blue; 
+
+.S-Password input{
+    position: absolute;
+    top: auto;
+    left: 7%;
+    width: 83%;
+    height: 30px;
+    border-radius: 7px;
+    border: none;
 }
-.SignUp button{
-    margin-top: 10px;
-    width: 70%;
+
+.Signup button{
+    margin-top: 30px;
+    margin-left: 22px;
+    width: 100%;
     border-radius: 10px;
     background: #E6E6FA; ;
     color: #262626;
@@ -609,25 +779,40 @@ footer{
     border: none;
     font-family: 'Dangrek', cursive; ;
 }
-.SignUp button:hover{
+
+.Signup button:hover{
     background: lightgreen; 
     border: none;
-    outline: none;
-    
+    outline: none; 
 }
+
+form p{
+    margin-left: 40px;
+}
+
+form a{
+    color: #1313b9c1;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+}
+
+/* .S-Password a:hover{
+    color: blue; 
+} */
 .Signup p{
     padding-top: 6px;
-    color: #E6E6FA;
+    color: #ccd5e9;
     font-family: 'Poppins', sans-serif;
     font-size:13px ;
 }
 .Signup p a{
    text-decoration: none;
-   color:#9a98a5;
+   color:#ccd5e9;
 }
 .Signup p a:hover{
-    color: rgb(74, 74, 180);
-   text-decoration:underline;
+    color: rgb(37, 37, 104);
+    text-decoration:underline;
 }
 
 @keyframes login {
@@ -638,16 +823,216 @@ footer{
         transform: translateY(50px);
     }
 }
-@keyframes SignUp {
+
+@keyframes signup {
     from{
-        transform: translateY(0);
+        transform: translateY(10px);
     }
     to{
         transform: translateY(50px);
     }
 }
 
+/**************footer***********************/ 
+
+
+/* body {
+    background: #fbfbfd;
+} */
+
+.new_footer_area {
+    background: #fbfbfd;
+}
+
+
+.new_footer_top {
+    padding: 120px 0px 270px;
+    position: relative;
+      overflow-x: hidden;
+}
+.new_footer_area .footer_bottom {
+    padding-top: 5px;
+    padding-bottom: 50px;
+}
+.footer_bottom {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    color: #7f88a6;
+    padding: 27px 0px;
+}
+.new_footer_top .company_widget p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 28px;
+    color: #6a7695;
+    margin-bottom: 20px;
+}
+.new_footer_top .company_widget .f_subscribe_two .btn_get {
+    border-width: 1px;
+    margin-top: 20px;
+}
+
+
+.btn_get_two:hover {
+    background: transparent;
+    color: #5e2ced;
+}
+.btn_get:hover {
+    color: #fff;
+    background: #6754e2;
+    border-color: #6754e2;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
+    text-decoration: none;
+    outline: none;
+}
 
 
 
-/************************************* 
+.new_footer_top .f_widget.about-widget .f_list li a:hover {
+    color: #5e2ced;
+}
+.new_footer_top .f_widget.about-widget .f_list li {
+    margin-bottom: 11px;
+}
+.f_widget.about-widget .f_list li:last-child {
+    margin-bottom: 0px;
+}
+.f_widget.about-widget .f_list li {
+    margin-bottom: 15px;
+}
+.f_widget.about-widget .f_list {
+    margin-bottom: 0px;
+}
+.new_footer_top .f_social_icon a {
+    width: 44px;
+    height: 44px;
+    line-height: 43px;
+    background: transparent;
+    border: 1px solid #e2e2eb;
+    font-size: 24px;
+}
+.f_social_icon a {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    position: relative;
+    font-size: 14px;
+    line-height: 45px;
+    color: #858da8;
+    display: inline-block;
+    background: #ebeef5;
+    text-align: center;
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+.f_social_icon i{
+    position: absolute;
+    top: 20%;
+    left: 20%;
+}
+
+.btn_get_two {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: #5e2ced;
+    border-color: #5e2ced;
+    color: #5e2ced;
+}
+
+.btn_get_two:hover {
+    background: transparent;
+    color: #5e2ced;
+}
+
+.new_footer_top .f_social_icon a:hover {
+    background: #5e2ced;
+    border-color: #5e2ced;
+  color:white;
+}
+.new_footer_top .f_social_icon a + a {
+    margin-left: 4px;
+}
+.new_footer_top .f-title {
+    margin-bottom: 30px;
+    color: #263b5e;
+}
+.f_600 {
+    font-weight: 600;
+}
+.f_size_18 {
+    font-size: 18px;
+}
+footer h1, h2, h3, h4, h5, h6 {
+    color: #4b505e;
+}
+.new_footer_top .f_widget.about-widget .f_list li a {
+    color: #6a7695;
+}
+
+
+.new_footer_top .footer_bg {
+    position: absolute;
+    bottom: 0;
+    background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigB8iI5tb8WSVBuVUGc9UjjB8O0708X7Fdic_4O1LT4CmLHoiwhanLXiRhe82yw0R7LgACQ2IhZaTY0hhmGi0gYp_Ynb49CVzfmXtYHUVKgXXpWvJ_oYT8cB4vzsnJLe3iCwuzj-w6PeYq_JaHmy_CoGoa6nw0FBo-2xLdOPvsLTh_fmYH2xhkaZ-OGQ/s16000/footer_bg.png") no-repeat scroll center 0;
+    width: 100%;
+    height: 266px;
+}
+
+.new_footer_top .footer_bg .footer_bg_one {
+    background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEia0PYPxwT5ifToyP3SNZeQWfJEWrUENYA5IXM6sN5vLwAKvaJS1pQVu8mOFFUa_ET4JuHNTFAxKURFerJYHDUWXLXl1vDofYXuij45JZelYOjEFoCOn7E6Vxu0fwV7ACPzArcno1rYuVxGB7JY6G7__e4_KZW4lTYIaHSLVaVLzklZBLZnQw047oq5-Q/s16000/volks.gif") no-repeat center center;
+    width: 330px;
+    height: 105px;
+    background-size:100%;
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+    -webkit-animation: myfirst 22s linear infinite;
+    animation: myfirst 22s linear infinite;
+}
+
+.new_footer_top .footer_bg .footer_bg_two {
+    background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhyLGwEUVwPK6Vi8xXMymsc-ZXVwLWyXhogZxbcXQYSY55REw_0D4VTQnsVzCrL7nsyjd0P7RVOI5NKJbQ75koZIalD8mqbMquP20fL3DxsWngKkOLOzoOf9sMuxlbyfkIBTsDw5WFUj-YJiI50yzgVjF8cZPHhEjkOP_PRTQXDHEq8AyWpBiJdN9SfQA/s16000/cyclist.gif") no-repeat center center;
+    width: 88px;
+    height: 100px;
+    background-size:100%;
+    bottom: 0;
+    left: 38%;
+    position: absolute;
+    -webkit-animation: myfirst 30s linear infinite;
+    animation: myfirst 30s linear infinite;
+}
+
+
+
+@-moz-keyframes myfirst {
+  0% {
+    left: -25%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* @-webkit-keyframes myfirst {
+  0% {
+    left: -25%;
+  }
+  100% {
+    left: 100%;
+  } */
+/* } */
+
+/* @keyframes myfirst {
+  0% {
+    left: -25%;
+  }
+  100% {
+    left: 100%;
+  }
+} */
