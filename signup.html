@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="#">
+    <link href="basic.html" rel="html">
+    <link href="signup.html" rel="html">
+    <script src="signup.js"></script>
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+    integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e"
+    crossorigin="anonymous"
+  />
+</head>
+<body>
+    <section id="SignUp">  
+        <div class="Signup-container">
+          <div class="Signup">
+            <div class="row">
+      <form id="signup_t" method="post" action="" autocomplete="off">
+        <h1 class="Sign-H">Sign Up</h1>
+            <div class="Name">
+             <input 
+              type="text"
+              class=" form-control no-outline"
+              placeholder="Enter Name"
+              name="s_name"
+              data-name="s_name"
+              id="S_Name" 
+              autocomplete="off" required>
+              <p></p>
+            </div>
+            <div class="S-Email">
+              <input 
+               type="email"
+               class=" form-control no-outline"
+               placeholder="Enter Email"
+               name="s_email"
+               data-name="s_email"
+               id="S_Email" 
+               autocomplete="off"
+                  required><p></p>
+             </div>
+            <div class="S-Password">
+              <input 
+              type="password"
+              class="form-control no-outline"
+              placeholder="Create Password"
+              name="s_password"
+               data-name="s_password"
+              id="S_Password"
+              autocomplete="off" required>
+              <p></p>
+            </div>
+            <div class="signup_submit submit">
+            <button class="btn btn-primary" id="btn-SignUp">Sign Up</button>
+          <p>Already have an account?
+             <a href="login.html" class="link-2">Login </a>
+            </p>
+          </div>
+            </form>
+          </div>
+          </div>
+        </div>
+         </section>
+
+         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
