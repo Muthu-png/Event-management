@@ -164,7 +164,7 @@ Form.addEventListener("submit", function (e) {
     valid_date(date_event)
   ) {
     const formData = new FormData(Form);
-    fetch("http://127.0.0.1:8000", {
+    fetch("http://127.0.0.1:8000/Booking/", {
       method: "POST",
       mode: "cors",
       body: formData,
