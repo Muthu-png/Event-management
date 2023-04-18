@@ -83,6 +83,7 @@ const check_name_signup = (e) => {
     }
   }
 
+document.addEventListener('DOMContentLoaded',function(){
 SIGNUP_FORM.addEventListener('submit',function (e){
     e.preventDefault();
 
@@ -94,7 +95,7 @@ SIGNUP_FORM.addEventListener('submit',function (e){
         if(check_name_signup(USERNAME_S) && checkEmail_signup(USEREMAIL_S) && check_password_signup(USER_PASS_S)){
             const form_User_signup = new FormData(SIGNUP_FORM);
             console.log(...form_User_signup)
-            fetch("http://localhost:8000/signup/",{
+            fetch("",{
                 method:"POST",
                 mode:"cors",
                 headers:{
@@ -104,6 +105,8 @@ SIGNUP_FORM.addEventListener('submit',function (e){
             }).then((res)=>{
                 if(!res.ok){
                     throw new Error('Network is not ok')
+                }else{
+                  window.location.href = '/home.html/'
                 }
                 return res.json();
             }).then((data)=>{
@@ -114,4 +117,4 @@ SIGNUP_FORM.addEventListener('submit',function (e){
             SIGNUP_FORM.reset();
         }
   });
-  
+});
